@@ -1,0 +1,19 @@
+<h2>Pessoas</h2>
+<button (click)="navigateToNewPessoa()">Nova Pessoa</button>
+<table>
+  <tr>
+    <th>Nome</th><th>Email</th><th>Idade</th><th>Ações</th>
+  </tr>
+  <tr *ngFor="let p of pessoas">
+    <td>{{p.nome}}</td>
+    <td>{{p.email}}</td>
+    <td>{{p.idade}}</td>
+    <td>
+      <button (click)=navigateToEditPessoa(p.id)>Editar</button>
+      <button (click)="excluir(p.id)">Excluir</button>
+    </td>
+  </tr>
+</table>
+
+<button (click)="anterior()" [disabled]="pagina === 1">Anterior</button>
+<button (click)="proxima()" [disabled]="pagina * tamanho >= total">Próxima</button>

@@ -1,0 +1,7 @@
+<h2>{{ editando ? 'Editar Pessoa' : 'Nova Pessoa' }}</h2>
+<form (ngSubmit)="salvar()">
+  <input [(ngModel)]="pessoa.nome" name="nome" placeholder="Nome" required>
+  <input [(ngModel)]="pessoa.email" name="email" placeholder="Email" required>
+  <input [(ngModel)]="pessoa.idade" name="idade" type="number" placeholder="Idade" required>
+  <button type="submit">Salvar</button>
+</form>
