@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
+  styleUrls: ['./listar.component.css'],
   imports: [
     CommonModule,
     FormsModule
@@ -51,7 +52,7 @@ export class ListarComponent {
   navigateToEditPessoa(id: number) {
     this.router.navigate(['/pessoas/editar', id]);
   }
-  
+
   navigateToViewPessoa(id: number) {
     this.router.navigate(['/pessoas/visualizar', id]);    
   }
